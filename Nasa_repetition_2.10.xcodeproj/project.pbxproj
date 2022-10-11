@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		C3254A3228F5597D003A4F92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A3128F5597D003A4F92 /* AppDelegate.swift */; };
 		C3254A3428F5597D003A4F92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A3328F5597D003A4F92 /* SceneDelegate.swift */; };
-		C3254A3628F5597D003A4F92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A3528F5597D003A4F92 /* ViewController.swift */; };
+		C3254A3628F5597D003A4F92 /* MainMenuViewConrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A3528F5597D003A4F92 /* MainMenuViewConrtoller.swift */; };
 		C3254A3928F5597D003A4F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3254A3728F5597D003A4F92 /* Main.storyboard */; };
 		C3254A3B28F5597D003A4F92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3254A3A28F5597D003A4F92 /* Assets.xcassets */; };
 		C3254A3E28F5597D003A4F92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3254A3C28F5597D003A4F92 /* LaunchScreen.storyboard */; };
+		C3254A4A28F55E05003A4F92 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4928F55E05003A4F92 /* ApiManager.swift */; };
+		C3254A4D28F58D73003A4F92 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4C28F58D73003A4F92 /* Information.swift */; };
+		C3254A5028F591C7003A4F92 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4F28F591C7003A4F92 /* InformationViewController.swift */; };
+		C3DA0EB228F5A71900F9B1B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA0EB128F5A71900F9B1B3 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C3254A2E28F5597D003A4F92 /* Nasa_repetition_2.10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasa_repetition_2.10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3254A3128F5597D003A4F92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3254A3328F5597D003A4F92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3254A3528F5597D003A4F92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3254A3528F5597D003A4F92 /* MainMenuViewConrtoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewConrtoller.swift; sourceTree = "<group>"; };
 		C3254A3828F5597D003A4F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3254A3A28F5597D003A4F92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3254A3D28F5597D003A4F92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3254A3F28F5597D003A4F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3254A4928F55E05003A4F92 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		C3254A4C28F58D73003A4F92 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		C3254A4F28F591C7003A4F92 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		C3DA0EB128F5A71900F9B1B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		C3254A3028F5597D003A4F92 /* Nasa_repetition_2.10 */ = {
 			isa = PBXGroup;
 			children = (
-				C3254A3128F5597D003A4F92 /* AppDelegate.swift */,
-				C3254A3328F5597D003A4F92 /* SceneDelegate.swift */,
-				C3254A3528F5597D003A4F92 /* ViewController.swift */,
-				C3254A3728F5597D003A4F92 /* Main.storyboard */,
-				C3254A3A28F5597D003A4F92 /* Assets.xcassets */,
-				C3254A3C28F5597D003A4F92 /* LaunchScreen.storyboard */,
-				C3254A3F28F5597D003A4F92 /* Info.plist */,
+				C3254A4B28F55E09003A4F92 /* Managers */,
+				C3254A4E28F58D76003A4F92 /* Models */,
+				C3254A4628F559B0003A4F92 /* Supporting */,
+				C3254A4528F5599C003A4F92 /* ViewControllers */,
+				C3254A4728F559BA003A4F92 /* Storyboards */,
+				C3254A4828F559C9003A4F92 /* Resources */,
 			);
 			path = Nasa_repetition_2.10;
+			sourceTree = "<group>";
+		};
+		C3254A4528F5599C003A4F92 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3254A3528F5597D003A4F92 /* MainMenuViewConrtoller.swift */,
+				C3254A4F28F591C7003A4F92 /* InformationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C3254A4628F559B0003A4F92 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C3254A3128F5597D003A4F92 /* AppDelegate.swift */,
+				C3254A3328F5597D003A4F92 /* SceneDelegate.swift */,
+				C3254A3F28F5597D003A4F92 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		C3254A4728F559BA003A4F92 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C3254A3728F5597D003A4F92 /* Main.storyboard */,
+				C3254A3C28F5597D003A4F92 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C3254A4828F559C9003A4F92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3254A3A28F5597D003A4F92 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3254A4B28F55E09003A4F92 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C3254A4928F55E05003A4F92 /* ApiManager.swift */,
+				C3DA0EB128F5A71900F9B1B3 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C3254A4E28F58D76003A4F92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3254A4C28F58D73003A4F92 /* Information.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3254A3628F5597D003A4F92 /* ViewController.swift in Sources */,
+				C3254A4A28F55E05003A4F92 /* ApiManager.swift in Sources */,
+				C3254A3628F5597D003A4F92 /* MainMenuViewConrtoller.swift in Sources */,
 				C3254A3228F5597D003A4F92 /* AppDelegate.swift in Sources */,
+				C3DA0EB228F5A71900F9B1B3 /* NetworkManager.swift in Sources */,
+				C3254A4D28F58D73003A4F92 /* Information.swift in Sources */,
 				C3254A3428F5597D003A4F92 /* SceneDelegate.swift in Sources */,
+				C3254A5028F591C7003A4F92 /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S4AD5RA4FS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Nasa_repetition_2.10/Info.plist;
+				INFOPLIST_FILE = Nasa_repetition_2.10/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S4AD5RA4FS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Nasa_repetition_2.10/Info.plist;
+				INFOPLIST_FILE = Nasa_repetition_2.10/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
