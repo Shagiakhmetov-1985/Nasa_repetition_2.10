@@ -13,9 +13,11 @@ class InformationViewController: UIViewController {
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var explanationLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         fetchData(from: ApiManager.shared.nasaInformation)
     }
     
@@ -23,12 +25,24 @@ class InformationViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    private func setup() {
+        navigationItem.title = "Random image"
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        authorLabel.isHidden = true
+        tagsLabel.isHidden = true
+        explanationLabel.isHidden = true
+    }
+    
     private func fetchData(from url: String) {
-        NetworkManager.shared.fetchData(from: url) { information in
+        NetworkManager.shared.fetchDataInformation(from: url) { information in
             DispatchQueue.main.async {
-                self.authorLabel.text = information.copyright
-                self.tagsLabel.text = information.title
-                self.explanationLabel.text = information.explanation
+                self.authorLabel.text = "Author: " + (information.copyright ?? "")
+                self.tagsLabel.text = "Tags: " + (information.title ?? "")
+                self.explanationLabel.text = "Explanation: " + (information.explanation ?? "")
+                self.authorLabel.isHidden = false
+                self.tagsLabel.isHidden = false
+                self.explanationLabel.isHidden = false
             }
             
             guard let url = URL(string: information.url ?? "") else { return }
@@ -38,6 +52,7 @@ class InformationViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     self.photoImage.image = UIImage(data: imageData)
+                    self.activityIndicator.stopAnimating()
                 }
             }
         }

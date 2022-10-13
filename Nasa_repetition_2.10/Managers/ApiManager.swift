@@ -14,5 +14,9 @@ class ApiManager {
         "https://api.nasa.gov/planetary/apod?api_key=\(key)"
     }
     
+    var marsRoverPhotos: String {
+        "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=\(key)"
+    }
+    
     private init() {}
 }

@@ -10,7 +10,7 @@ import Foundation
 class NetworkManager {
     static let shared = NetworkManager()
     
-    func fetchData(from url: String, with complition: @escaping (Information) -> Void) {
+    func fetchDataInformation(from url: String, with complition: @escaping (Information) -> Void) {
         guard let getURL = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: getURL) { data, _, error in
@@ -26,6 +26,26 @@ class NetworkManager {
                 complition(information)
             } catch let error {
                 print("Ошибка получения данных", error)
+            }
+        }.resume()
+    }
+    
+    func fetchDataMarsPhotos(from url: String, with complition: @escaping ([Camera]) -> Void) {
+        guard let getURL = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: getURL) { data, _, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let marsPhotos = try JSONDecoder().decode([Camera].self, from: data)
+                complition(marsPhotos)
+            } catch let error {
+                print("error of data", error)
             }
         }.resume()
     }

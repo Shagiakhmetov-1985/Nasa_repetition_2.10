@@ -16,6 +16,9 @@
 		C3254A4A28F55E05003A4F92 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4928F55E05003A4F92 /* ApiManager.swift */; };
 		C3254A4D28F58D73003A4F92 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4C28F58D73003A4F92 /* Information.swift */; };
 		C3254A5028F591C7003A4F92 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4F28F591C7003A4F92 /* InformationViewController.swift */; };
+		C33F3FCB28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3FCA28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift */; };
+		C3CFFAF528F7EF5400B07624 /* PhotoOfRoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFFAF428F7EF5400B07624 /* PhotoOfRoverViewController.swift */; };
+		C3CFFAF728F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFFAF628F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift */; };
 		C3DA0EB228F5A71900F9B1B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA0EB128F5A71900F9B1B3 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		C3254A4928F55E05003A4F92 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		C3254A4C28F58D73003A4F92 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		C3254A4F28F591C7003A4F92 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		C33F3FCA28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotosViewController.swift; sourceTree = "<group>"; };
+		C3CFFAF428F7EF5400B07624 /* PhotoOfRoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOfRoverViewController.swift; sourceTree = "<group>"; };
+		C3CFFAF628F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotosTableViewCell.swift; sourceTree = "<group>"; };
 		C3DA0EB128F5A71900F9B1B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +74,7 @@
 				C3254A4E28F58D76003A4F92 /* Models */,
 				C3254A4628F559B0003A4F92 /* Supporting */,
 				C3254A4528F5599C003A4F92 /* ViewControllers */,
+				C3CFFAF828F7F1E200B07624 /* Views */,
 				C3254A4728F559BA003A4F92 /* Storyboards */,
 				C3254A4828F559C9003A4F92 /* Resources */,
 			);
@@ -79,6 +86,8 @@
 			children = (
 				C3254A3528F5597D003A4F92 /* MainMenuViewConrtoller.swift */,
 				C3254A4F28F591C7003A4F92 /* InformationViewController.swift */,
+				C33F3FCA28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift */,
+				C3CFFAF428F7EF5400B07624 /* PhotoOfRoverViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -125,6 +134,14 @@
 				C3254A4C28F58D73003A4F92 /* Information.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C3CFFAF828F7F1E200B07624 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3CFFAF628F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +218,9 @@
 				C3254A4A28F55E05003A4F92 /* ApiManager.swift in Sources */,
 				C3254A3628F5597D003A4F92 /* MainMenuViewConrtoller.swift in Sources */,
 				C3254A3228F5597D003A4F92 /* AppDelegate.swift in Sources */,
+				C33F3FCB28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift in Sources */,
+				C3CFFAF728F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift in Sources */,
+				C3CFFAF528F7EF5400B07624 /* PhotoOfRoverViewController.swift in Sources */,
 				C3DA0EB228F5A71900F9B1B3 /* NetworkManager.swift in Sources */,
 				C3254A4D28F58D73003A4F92 /* Information.swift in Sources */,
 				C3254A3428F5597D003A4F92 /* SceneDelegate.swift in Sources */,
