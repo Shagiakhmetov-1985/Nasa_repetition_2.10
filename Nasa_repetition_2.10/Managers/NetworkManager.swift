@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
@@ -30,7 +31,21 @@ class NetworkManager {
         }.resume()
     }
     
-    func fetchDataMarsPhotos(from url: String, with complition: @escaping ([Camera]) -> Void) {
+    func fetchDataEarthPhoto(from url: String, with complition: @escaping (Data) -> Void) {
+        guard let getURL = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: getURL) { data, _, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let data = data else { return }
+            complition(data)
+        }.resume()
+    }
+    
+    func fetchDataOfEarth(from url: String, with complition: @escaping ([Earth]) -> Void) {
         guard let getURL = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: getURL) { data, _, error in
@@ -42,10 +57,10 @@ class NetworkManager {
             guard let data = data else { return }
             
             do {
-                let marsPhotos = try JSONDecoder().decode([Camera].self, from: data)
-                complition(marsPhotos)
+                let earth = try JSONDecoder().decode([Earth].self, from: data)
+                complition(earth)
             } catch let error {
-                print("error of data", error)
+                print("Ошибка получения данных", error)
             }
         }.resume()
     }

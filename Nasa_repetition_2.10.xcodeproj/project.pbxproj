@@ -16,9 +16,11 @@
 		C3254A4A28F55E05003A4F92 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4928F55E05003A4F92 /* ApiManager.swift */; };
 		C3254A4D28F58D73003A4F92 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4C28F58D73003A4F92 /* Information.swift */; };
 		C3254A5028F591C7003A4F92 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3254A4F28F591C7003A4F92 /* InformationViewController.swift */; };
-		C33F3FCB28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3FCA28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift */; };
-		C3CFFAF528F7EF5400B07624 /* PhotoOfRoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFFAF428F7EF5400B07624 /* PhotoOfRoverViewController.swift */; };
-		C3CFFAF728F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFFAF628F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift */; };
+		C333A04A28FD3EA000000C70 /* DetailsOfPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333A04928FD3EA000000C70 /* DetailsOfPhotoViewController.swift */; };
+		C333A04C28FD4FD000000C70 /* EarthPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333A04B28FD4FD000000C70 /* EarthPhoto.swift */; };
+		C33F3FCB28F6FB7C00E78FCD /* EarthPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F3FCA28F6FB7C00E78FCD /* EarthPhotoViewController.swift */; };
+		C3CFFAF528F7EF5400B07624 /* DetailsOfEarthPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFFAF428F7EF5400B07624 /* DetailsOfEarthPhotoViewController.swift */; };
+		C3CFFAF728F7F1DE00B07624 /* EarthPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CFFAF628F7F1DE00B07624 /* EarthPhotoTableViewCell.swift */; };
 		C3DA0EB228F5A71900F9B1B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA0EB128F5A71900F9B1B3 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,9 +36,11 @@
 		C3254A4928F55E05003A4F92 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		C3254A4C28F58D73003A4F92 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		C3254A4F28F591C7003A4F92 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		C33F3FCA28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotosViewController.swift; sourceTree = "<group>"; };
-		C3CFFAF428F7EF5400B07624 /* PhotoOfRoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOfRoverViewController.swift; sourceTree = "<group>"; };
-		C3CFFAF628F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverPhotosTableViewCell.swift; sourceTree = "<group>"; };
+		C333A04928FD3EA000000C70 /* DetailsOfPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOfPhotoViewController.swift; sourceTree = "<group>"; };
+		C333A04B28FD4FD000000C70 /* EarthPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthPhoto.swift; sourceTree = "<group>"; };
+		C33F3FCA28F6FB7C00E78FCD /* EarthPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthPhotoViewController.swift; sourceTree = "<group>"; };
+		C3CFFAF428F7EF5400B07624 /* DetailsOfEarthPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOfEarthPhotoViewController.swift; sourceTree = "<group>"; };
+		C3CFFAF628F7F1DE00B07624 /* EarthPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		C3DA0EB128F5A71900F9B1B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +90,9 @@
 			children = (
 				C3254A3528F5597D003A4F92 /* MainMenuViewConrtoller.swift */,
 				C3254A4F28F591C7003A4F92 /* InformationViewController.swift */,
-				C33F3FCA28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift */,
-				C3CFFAF428F7EF5400B07624 /* PhotoOfRoverViewController.swift */,
+				C33F3FCA28F6FB7C00E78FCD /* EarthPhotoViewController.swift */,
+				C3CFFAF428F7EF5400B07624 /* DetailsOfEarthPhotoViewController.swift */,
+				C333A04928FD3EA000000C70 /* DetailsOfPhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C3254A4C28F58D73003A4F92 /* Information.swift */,
+				C333A04B28FD4FD000000C70 /* EarthPhoto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,7 +145,7 @@
 		C3CFFAF828F7F1E200B07624 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C3CFFAF628F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift */,
+				C3CFFAF628F7F1DE00B07624 /* EarthPhotoTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,12 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C333A04A28FD3EA000000C70 /* DetailsOfPhotoViewController.swift in Sources */,
+				C333A04C28FD4FD000000C70 /* EarthPhoto.swift in Sources */,
 				C3254A4A28F55E05003A4F92 /* ApiManager.swift in Sources */,
 				C3254A3628F5597D003A4F92 /* MainMenuViewConrtoller.swift in Sources */,
 				C3254A3228F5597D003A4F92 /* AppDelegate.swift in Sources */,
-				C33F3FCB28F6FB7C00E78FCD /* MarsRoverPhotosViewController.swift in Sources */,
-				C3CFFAF728F7F1DE00B07624 /* MarsRoverPhotosTableViewCell.swift in Sources */,
-				C3CFFAF528F7EF5400B07624 /* PhotoOfRoverViewController.swift in Sources */,
+				C33F3FCB28F6FB7C00E78FCD /* EarthPhotoViewController.swift in Sources */,
+				C3CFFAF728F7F1DE00B07624 /* EarthPhotoTableViewCell.swift in Sources */,
+				C3CFFAF528F7EF5400B07624 /* DetailsOfEarthPhotoViewController.swift in Sources */,
 				C3DA0EB228F5A71900F9B1B3 /* NetworkManager.swift in Sources */,
 				C3254A4D28F58D73003A4F92 /* Information.swift in Sources */,
 				C3254A3428F5597D003A4F92 /* SceneDelegate.swift in Sources */,

@@ -18,7 +18,6 @@ class InformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        fetchData(from: ApiManager.shared.nasaInformation)
     }
     
     @IBAction func undoButton(_ sender: UIBarButtonItem) {
@@ -34,7 +33,7 @@ class InformationViewController: UIViewController {
         explanationLabel.isHidden = true
     }
     
-    private func fetchData(from url: String) {
+    func fetchData(from url: String) {
         NetworkManager.shared.fetchDataInformation(from: url) { information in
             DispatchQueue.main.async {
                 self.authorLabel.text = "Author: " + (information.copyright ?? "")
