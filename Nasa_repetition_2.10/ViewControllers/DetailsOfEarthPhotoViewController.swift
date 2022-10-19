@@ -18,7 +18,6 @@ class DetailsOfEarthPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        fetchImage(with: ApiManager.shared.earthPhoto)
     }
     
     private func setup() {
@@ -30,6 +29,7 @@ class DetailsOfEarthPhotoViewController: UIViewController {
         Identifier: \(data.identifier ?? "")
         
         Caption: \(data.caption ?? "")
+        
         Image: \(data.image ?? "")
         
         Centroid coordinates:
@@ -64,8 +64,10 @@ class DetailsOfEarthPhotoViewController: UIViewController {
     private func string(from text: Double) -> String {
         String(format: "%.2f", text)
     }
-    
-    private func fetchImage(with url: String) {
+}
+// MARK: - Сетевой запрос для загрузки фото
+extension DetailsOfEarthPhotoViewController {
+    func fetchImage(from url: String) {
         NetworkManager.shared.fetchDataEarthPhoto(from: url) { data in
             DispatchQueue.main.async {
                 self.imageOfPhoto.image = UIImage(data: data)

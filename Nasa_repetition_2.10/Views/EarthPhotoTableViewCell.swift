@@ -8,10 +8,10 @@
 import UIKit
 
 class EarthPhotoTableViewCell: UITableViewCell {
-    let image = Image.allCases.shuffled()
-    
     @IBOutlet weak var imageOfPhoto: UIImageView!
     @IBOutlet weak var labelOfIdentifier: UILabel!
+    
+    let image = Image.allCases.shuffled()
     
     func configure(with dataOfEarth: Earth) {
         labelOfIdentifier.font = UIFont.systemFont(ofSize: 25)

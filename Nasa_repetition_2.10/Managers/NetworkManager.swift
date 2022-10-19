@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
@@ -59,6 +58,26 @@ class NetworkManager {
             do {
                 let earth = try JSONDecoder().decode([Earth].self, from: data)
                 complition(earth)
+            } catch let error {
+                print("Ошибка получения данных", error)
+            }
+        }.resume()
+    }
+    
+    func fetchMarsRoverPhotos(from url: String, with complition: @escaping ([Camera]) -> Void) {
+        guard let getURL = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: getURL) { data, _, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let mars = try JSONDecoder().decode(Mars.self, from: data)
+                complition(mars.photos)
             } catch let error {
                 print("Ошибка получения данных", error)
             }

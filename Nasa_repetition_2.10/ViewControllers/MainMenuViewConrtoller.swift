@@ -17,7 +17,7 @@ class MainMenuViewConrtoller: UIViewController {
         super.viewDidLoad()
         settingInformationButton()
     }
-    
+    // MARK: - Переход к вьюконтроллеру и вызов сетевого запроса при нажатии на кнопку
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
             
@@ -25,17 +25,21 @@ class MainMenuViewConrtoller: UIViewController {
             guard let navigationVC = segue.destination as? UINavigationController else { return }
             guard let randomImageVC = navigationVC.topViewController as? InformationViewController else { return }
             randomImageVC.fetchData(from: ApiManager.shared.nasaInformation)
-        default:
+        case "earthInfo":
             guard let navigationVC = segue.destination as? UINavigationController else { return }
             guard let earthPhotoVC = navigationVC.topViewController as? EarthPhotoViewController else { return }
             earthPhotoVC.fetchDataOfEarth(from: ApiManager.shared.earthDetails)
+        default:
+            guard let navigationVC = segue.destination as? UINavigationController else { return }
+            guard let marsPhotoVC = navigationVC.topViewController as? MarsListViewController else { return }
+            marsPhotoVC.fetchData(from: ApiManager.shared.marsRoverPhotos)
         }
     }
-    
+    // MARK: - Внешний вид кнопок
     private func settingInformationButton() {
         informationButton.setTitle("Random image every day", for: .normal)
         informationButton.setTitleColor(.white, for: .normal)
-        informationButton.backgroundColor = UIColor(red: 35/255, green: 35/255, blue: 35/255, alpha: 1)
+        informationButton.backgroundColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1)
         informationButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
         informationButton.layer.cornerRadius = 8
         
@@ -45,9 +49,9 @@ class MainMenuViewConrtoller: UIViewController {
         marsRoverButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
         marsRoverButton.layer.cornerRadius = 8
         
-        detailsPhotoButton.setTitle("Details photo", for: .normal)
+        detailsPhotoButton.setTitle("Mars photo", for: .normal)
         detailsPhotoButton.setTitleColor(.white, for: .normal)
-        detailsPhotoButton.backgroundColor = UIColor(red: 55/255, green: 185/255, blue: 55/255, alpha: 1)
+        detailsPhotoButton.backgroundColor = UIColor(red: 215/255, green: 55/255, blue: 55/255, alpha: 1)
         detailsPhotoButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
         detailsPhotoButton.layer.cornerRadius = 8
     }

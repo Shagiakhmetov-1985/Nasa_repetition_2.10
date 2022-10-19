@@ -32,7 +32,9 @@ class InformationViewController: UIViewController {
         tagsLabel.isHidden = true
         explanationLabel.isHidden = true
     }
-    
+}
+// MARK: - Сетевой запрос для загрузки картинки и описания
+extension InformationViewController {
     func fetchData(from url: String) {
         NetworkManager.shared.fetchDataInformation(from: url) { information in
             DispatchQueue.main.async {
